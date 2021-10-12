@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModuleInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ModulePN>MOD01?????00??????</ModulePN>
+  <Creator PN="01" Name="Acer-HQ1" />
+  <Type PN="" Name="Drivers" />
+  <Module PN="" Name="Realtek Audio Codec_M ALC255" Alias="" GUID="" Serial="ALC255" Provider="Realtek" Class="Audio Codec_M" />
+  <WOS PN="61" Sku="W10 All" CPU="X64" />
+  <Lang>All language</Lang>
+  <ModuleVersion>v6.0.8929.1</ModuleVersion>
+  <DriverVersion>v6.0.8929.1</DriverVersion>
+  <OptionVersion>Setup.exe /s /z[-rpC:\oem\RHDSetup.log]</OptionVersion>
+  <ProjectCodeName>NULL</ProjectCodeName>
+  <OdmName>NBCOM</OdmName>
+  <ModuleTimeout>30</ModuleTimeout>
+  <InstallPreiod>UserAlaunch</InstallPreiod>
+  <Reboot>False</Reboot>
+  <Delete>False</Delete>
+  <ReinstallProcessList>
+    <Process Country="" OS-Language="" OS-Sku="" Check="" Timeout="0" RetCode="-" Params="" Exec="%RELATIVE_PATH%\Setup.exe" Order="00" Period="" />
+  </ReinstallProcessList>
+  <AutoRun>True</AutoRun>
+  <InstallPath />
+  <Description />
+  <ProcessList>
+    <Process Country="" OS-Language="" OS-Sku="" Check="False" Timeout="30" RetCode="-" Params="/s /z[-rpC:\oem\RHDSetup.log]" Exec="%RELATIVE_PATH%\Setup.exe" Order="00" Period="" />
+  </ProcessList>
+  <RegItemList />
+  <ModuleProperty>RCD,STCD,RSCD</ModuleProperty>
+  <HWIDs>HDAUDIO\FUNC_01&amp;VEN_10EC&amp;DEV_0255&amp;SUBSYS_10251331;HDAUDIO\FUNC_01&amp;VEN_10EC&amp;DEV_0255&amp;SUBSYS_1025133;HDAUDIO\FUNC_01&amp;VEN_10EC&amp;DEV_0255&amp;SUBSYS_1025133;APO\VEN_WAVES&amp;AID_MA77MV47_ACER</HWIDs>
+  <AutoCheckHWID>True</AutoCheckHWID>
+  <CheckRemove>True</CheckRemove>
+  <MVPKernelVersion>2.0.6.4</MVPKernelVersion>
+  <MVPUIVersion>2.0.8.1</MVPUIVersion>
+  <LOB>Notebook</LOB>
+</ModuleInfo>
