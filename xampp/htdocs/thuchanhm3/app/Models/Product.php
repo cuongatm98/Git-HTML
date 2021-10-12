@@ -13,4 +13,7 @@ class Product extends Model
      * @var mixed|string
      */
     private $name;
+    function category(){
+        return $this->belongsTo(Category::class,'category_id');
+    }
 }

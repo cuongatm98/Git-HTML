@@ -76,4 +76,13 @@ class ProductController extends Controller
         Session::flash('success','Xóa thành công');
         return redirect()->route('products.index');
     }
+
+    public function getSearch(Request $request)
+    {
+        $products = Product::with('category')
+            ->where('name','LIKE',"%$request->value%")
+            ->paginate(5);
+        return view('backend.products.search',compact('products'));
+    }
+
 }

@@ -18,9 +18,6 @@
                         <h2>Bảng <b>Danh sách sản phẩm</b></h2>
                     </div>
                     <div class="table-responsive">
-                        <h3 class="card-title">
-                            <a class="btn btn-primary" href="{{route('products.create')}}">Thêm mới</a>
-                        </h3>
                         <table class="table">
                             <thead>
                             <tr>
@@ -59,9 +56,9 @@
                             @endforeach
                             </tbody>
                         </table>
-{{--                        <div style=" position: relative;float: right;" class="d-flex justify-content-center">--}}
-{{--                            {!! $products->links() !!}--}}
-{{--                        </div>--}}
+                        {{--                        <div style=" position: relative;float: right;" class="d-flex justify-content-center">--}}
+                        {{--                            {!! $products->links() !!}--}}
+                        {{--                        </div>--}}
                     </div>
 
                 </div>
@@ -69,4 +66,3 @@
         </div>
     </div>
 @endsection
-

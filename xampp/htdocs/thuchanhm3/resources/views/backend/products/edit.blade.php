@@ -19,7 +19,7 @@
             <div class="form-group">
                 <label>Giá sản phẩm</label>
                 <div class="col-sm-9">
-                    <input type="text" name="price" class="form-control"  value="{{ $product->price }}" required>
+                    <input type="number" min="0" name="price" class="form-control"  value="{{ $product->price }}" required>
                 </div>
             </div>
             <button type="submit" class="btn btn-primary">Chỉnh sửa</button>

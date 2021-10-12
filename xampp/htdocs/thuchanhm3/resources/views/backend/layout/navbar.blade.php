@@ -8,12 +8,12 @@
             <span class="mdi mdi-menu"></span>
         </button>
         <div class="search-field d-none d-md-block">
-            <form class="d-flex align-items-center h-100" action="#">
+            <form class="d-flex align-items-center h-100" method="get" action="{{route('search')}}">
                 <div class="input-group">
                     <div class="input-group-prepend bg-transparent">
                         <i class="input-group-text border-0 mdi mdi-magnify"></i>
                     </div>
-                    <input type="text" class="form-control bg-transparent border-0" placeholder="Tìm kiếm">
+                    <input type="text" name="value" class="form-control bg-transparent border-0" placeholder="Tìm kiếm">
                 </div>
             </form>
         </div>

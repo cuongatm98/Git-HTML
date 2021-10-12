@@ -19,6 +19,8 @@ Route::get('/',function(){
 })->name('dashboard');
 
 Route::prefix('/products')->group(function(){
+    Route::get('/search', [ProductController::class,'getSearch'])->name('search');
+    Route::post('/search', 'SearchController@getSearchAjax')->name('search');
     Route::get('/', [ProductController::class, 'index'])->name('products.index');
     Route::get('/create', [ProductController::class, 'create'])->name('products.create');
     Route::post('/create', [ProductController::class, 'store'])->name('products.store');

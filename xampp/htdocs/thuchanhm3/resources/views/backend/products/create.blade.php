@@ -35,7 +35,7 @@
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Giá sản phẩm</label>
                                 <div class="col-sm-9">
-                                    <input type="number" class="form-control" name="price" required>
+                                    <input type="number" min="0" class="form-control" name="price" required>
                                 </div>
                             </div>
                             <div class="form-group">
