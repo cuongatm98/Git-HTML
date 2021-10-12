@@ -17,7 +17,8 @@
                             <div class="form-group">
                                 <label>Tên sản phẩm</label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="form-control" name="name" placeholder="Enter name" required>
+                                    <input type="text" class="form-control" name="name" placeholder="Enter name"
+                                           required>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -39,9 +40,13 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputEmail1">ID thể loại</label>
+                                <label for="exampleInputEmail1">Thể loại</label>
                                 <div class="col-sm-9">
-                                    <input type="number" class="form-control" name="category_id" required>
+                                    <select name="category_id">
+                                           @foreach($categories as $key => $category)
+                                            <option value="{{$category->id}}">{{$category->name}}</option>
+                                            @endforeach
+                                    </select>
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-primary">Thêm mới</button>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 
+use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
@@ -17,11 +18,14 @@ class ProductController extends Controller
     }
     public function create()
     {
-        return view('backend.products.create');
+        $categories=Category::all();
+        return view('backend.products.create',compact('categories'));
     }
 
     public function store(Request $request): \Illuminate\Http\RedirectResponse
     {
+
+
         $products = new Product();
         $products->name = $request->input("name");
         if ($request->hasFile('image')) {
@@ -30,7 +34,7 @@ class ProductController extends Controller
             $products->image = $path;
         }
         $products->price = $request->input('price');
-
+        $products->category_id=$request->input('category_id');
         $products->save();
         session::flash('success', 'Tạo mới thành công');
         return redirect()->route('products.index');
