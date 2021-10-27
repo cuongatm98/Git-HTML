@@ -1,0 +1,15 @@
+<table border="2px">
+  <tr>
+    <td>STT</td>
+    <td>Tên</td>
+    <td>Trạng thái</td>
+  </tr>
+  <tr *ngFor="let book of books; index as i">
+    <td>{{i + 1}}</td>
+    <td>{{book.name}}</td>
+    <td *ngIf="book.read==true"><input class="btn btn-primary" type="button" value="Đã đọc"></td>
+    <td *ngIf="book.read==false"><input class="btn btn-primary" type="button" value="Đọc lại"></td>
+  </tr>
+  <tr><td colspan="3"><input type="text" name="name" placeholder="create a book"><input class="btn btn-primary" type="button" value="thêm"></td></tr>
+</table>
+<a routerLink=''>Về trang chủ</a>
